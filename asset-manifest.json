@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/react-template/static/css/main.39001a23.css",
+    "main.js": "/react-template/static/js/main.f0731e62.js",
+    "static/media/MainLandingPageHero.png": "/react-template/static/media/MainLandingPageHero.30b380787ef7adb09eb6.png",
+    "static/media/product3.jpg": "/react-template/static/media/product3.1a16f43d62cbfc4c9da7.jpg",
+    "static/media/product2.jpg": "/react-template/static/media/product2.c3c795f433c4119b2cb0.jpg",
+    "static/media/product4.jpg": "/react-template/static/media/product4.c35b1cb06d2515497405.jpg",
+    "static/media/product5.jpg": "/react-template/static/media/product5.16d9fa3c6c98bbcfc651.jpg",
+    "static/media/photo-beef.avif": "/react-template/static/media/photo-beef.148adbac7d0d62c630f8.avif",
+    "static/media/product1.jpg": "/react-template/static/media/product1.cd907a57988af4d282f6.jpg",
+    "static/media/so-mi-he-1770x720-27.jpg": "/react-template/static/media/so-mi-he-1770x720-27.84ce6cd46052cf7cdbda.jpg",
+    "static/media/1770x720-26.jpg": "/react-template/static/media/1770x720-26.9c1e8856f17605fc4241.jpg",
+    "static/media/1770x720-22.jpg": "/react-template/static/media/1770x720-22.c48a10f6316ec1ba1069.jpg",
+    "static/media/698x900-13.jpg": "/react-template/static/media/698x900-13.9afc954abed71bcdd807.jpg",
+    "static/media/so-mi-he-698x900-14.jpg": "/react-template/static/media/so-mi-he-698x900-14.f7271bba9565c6413502.jpg",
+    "static/media/photo-chicken.jpg": "/react-template/static/media/photo-chicken.36c0e5d52a61dbc4c38d.jpg",
+    "static/media/chilli-crispy-nachos.jpg": "/react-template/static/media/chilli-crispy-nachos.8b7f2ebffa76715441b2.jpg",
+    "static/media/photo-fish.avif": "/react-template/static/media/photo-fish.9bc20b6ea29078682a4b.avif",
+    "static/media/photo-salad.avif": "/react-template/static/media/photo-salad.9be6a8ef9fa2d9c3116e.avif",
+    "static/media/698x900-8.jpg": "/react-template/static/media/698x900-8.948a0a297f870af21ba9.jpg",
+    "static/media/photo-potato.avif": "/react-template/static/media/photo-potato.41c2788720df519bf78a.avif",
+    "static/media/photo-pig.avif": "/react-template/static/media/photo-pig.3bd0c441c6bd7cbafa00.avif",
+    "static/media/guacamole-mex.avif": "/react-template/static/media/guacamole-mex.129d96f20411bb1d76dc.avif",
+    "static/media/popper.avif": "/react-template/static/media/popper.95fd821867ef0a2fda8f.avif",
+    "static/media/app-mockup.png": "/react-template/static/media/app-mockup.3cdce84cf7ea691ecca9.png",
+    "static/media/photo-bread.avif": "/react-template/static/media/photo-bread.89fbbc035540202d33d8.avif",
+    "static/media/chille-cake.avif": "/react-template/static/media/chille-cake.201c3adc9b74063410d2.avif",
+    "static/media/login-illustration.svg": "/react-template/static/media/login-illustration.39a64f784d3474ef7b31bd14ad6360c7.svg",
+    "index.html": "/react-template/index.html",
+    "static/media/logo.svg": "/react-template/static/media/logo.68e911afe80160fa490249cd905c76f3.svg",
+    "main.39001a23.css.map": "/react-template/static/css/main.39001a23.css.map",
+    "main.f0731e62.js.map": "/react-template/static/js/main.f0731e62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39001a23.css",
+    "static/js/main.f0731e62.js"
+  ]
+}
