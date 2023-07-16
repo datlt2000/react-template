@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} />
           <Route path="/components/:type/:name" element={<ComponentRenderer />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
-          <Route path="/" element={<DressShopLandingPage />} />
+          <Route path="/react-template/" element={<DressShopLandingPage />} />
           <Route path="/main" element={<MainLandingPage />} />
         </Routes>
       </Router>
