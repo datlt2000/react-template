@@ -9,6 +9,7 @@ import DressShopLandingPage from 'pages/DressShopLandingPage';
 import ThankYouPage from "pages/ThankYouPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductPage from 'pages/ProductPage';
 
 export default function App() {
   document.body.setAttribute('data-theme', 'light')
@@ -20,7 +21,7 @@ export default function App() {
           <Route path="/react-template/components/:type/:name" element={<ComponentRenderer />} />
           <Route path="/react-template/thank-you" element={<ThankYouPage />} />
           <Route path="/react-template" element={<DressShopLandingPage />} />
-          <Route path="/react-template/main" element={<MainLandingPage />} />
+          <Route path="/react-template/product" element={<ProductPage />} />
         </Routes>
       </Router>
     </>
