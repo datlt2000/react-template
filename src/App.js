@@ -8,22 +8,22 @@ import MainLandingPage from "pages/MainLandingPage.js";
 import DressShopLandingPage from 'pages/DressShopLandingPage';
 import ThankYouPage from "pages/ThankYouPage.js";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductPage from 'pages/ProductPage';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   document.body.setAttribute('data-theme', 'light')
   return (
     <>
-      <Router>
+      <HashRouter>
         <Routes>
-          <Route path="/react-template/components/:type/:subtype/:name" element={<ComponentRenderer />} />
-          <Route path="/react-template/components/:type/:name" element={<ComponentRenderer />} />
+          {/* <Route path="/react-template/components/:type/:subtype/:name" element={<ComponentRenderer />} />
+          <Route path="/react-template/components/:type/:name" element={<ComponentRenderer />} /> */}
           <Route path="/react-template/thank-you" element={<ThankYouPage />} />
-          <Route path="/react-template" element={<DressShopLandingPage />} />
-          <Route path="/react-template/product" element={<ProductPage />} />
+          <Route path="/" element={<DressShopLandingPage />} />
+          <Route path="/product" element={<ProductPage />} />
         </Routes>
-      </Router>
+      </HashRouter>
     </>
   );
 }
