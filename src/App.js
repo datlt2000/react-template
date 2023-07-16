@@ -20,8 +20,8 @@ export default function App() {
           {/* <Route path="/react-template/components/:type/:subtype/:name" element={<ComponentRenderer />} />
           <Route path="/react-template/components/:type/:name" element={<ComponentRenderer />} /> */}
           <Route path="/react-template/thank-you" element={<ThankYouPage />} />
-          <Route path="/" element={<DressShopLandingPage />} />
           <Route path="/product" element={<ProductPage />} />
+          <Route exact path="/" element={<DressShopLandingPage />} />
         </Routes>
       </HashRouter>
     </>
