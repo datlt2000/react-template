@@ -2,7 +2,7 @@
   "name": "templates",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/datlt2000/react-template/",
+  "homepage": "https://datlt2000.github.io/react-template/",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
   "dependencies": {
