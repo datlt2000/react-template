@@ -16,11 +16,11 @@ export default function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} />
-          <Route path="/components/:type/:name" element={<ComponentRenderer />} />
-          <Route path="/thank-you" element={<ThankYouPage />} />
-          <Route path="/react-template/" element={<DressShopLandingPage />} />
-          <Route path="/main" element={<MainLandingPage />} />
+          <Route path="/react-template/components/:type/:subtype/:name" element={<ComponentRenderer />} />
+          <Route path="/react-template/components/:type/:name" element={<ComponentRenderer />} />
+          <Route path="/react-template/thank-you" element={<ThankYouPage />} />
+          <Route path="/react-template" element={<DressShopLandingPage />} />
+          <Route path="/react-template/main" element={<MainLandingPage />} />
         </Routes>
       </Router>
     </>
