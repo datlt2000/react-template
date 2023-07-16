@@ -144,31 +144,31 @@ export const collection4 = ao_dai_689_900;
 
 export const dress = [
     {
-        url: "/#/product",
+        url: "/react-template/#/product",
         image: product1,
         title: "Áo dài tay lỡ",
         description: "6.99$"
     },
     {
-        url: "/#/product",
+        url: "/react-template/#/product",
         image: product2,
         title: "Áo dài truyền thống",
         description: "6.99$"
     },
     {
-        url: "/#/product",
+        url: "/react-template/#/product",
         image: product3,
         title: "Đầm cổ yếm vai trễ",
         description: "6.99$"
     },
     {
-        url: "/#/product",
+        url: "/react-template/#/product",
         image: product4,
         title: "Sơ mi phối chân váy",
         description: "6.99$"
     },
     {
-        url: "/#/product",
+        url: "/react-template/#/product",
         image: product5,
         title: "Áo dài truyền thống lụa",
         description: "6.99$"
