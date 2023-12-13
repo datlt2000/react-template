@@ -24,7 +24,7 @@ export default function ThumbsSlider(props) {
                 {props.slides.map((item, index) => {
                     return <SwiperSlide key={index}>
                         <picture>
-                            <img src={item.imageXs} alt='summer collection' style={{ maxWidth: '100%', maxHeight: '100%' }} />
+                            <img src={item.imageXs} alt='summer collection' style={{ width: '100%', height: '100%' }} />
                         </picture>
                     </SwiperSlide>
                 })}

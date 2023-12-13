@@ -29,8 +29,8 @@ export default function DressShopLandingPage() {
                 </Container>
                 <div className="my-5">
                     <picture>
-                        <source media='(min-width: 720px)' srcSet={collection1} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        <img src={collection2} alt='summer collection' style={{ maxWidth: '100%', maxHeight: '100%' }} />
+                        <source media='(min-width: 720px)' srcSet={collection1} style={{ width: '100%', height: '100%' }} />
+                        <img src={collection2} alt='summer collection' style={{ width: '100%', height: '100%' }} />
                     </picture>
                 </div>
                 <Container className="my-5">
@@ -38,8 +38,8 @@ export default function DressShopLandingPage() {
                 </Container>
                 <div className="my-5">
                     <picture>
-                        <source media='(min-width: 720px)' srcSet={collection3} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        <img src={collection4} alt='sea collection' style={{ maxWidth: '100%', maxHeight: '100%' }} />
+                        <source media='(min-width: 720px)' srcSet={collection3} style={{ width: '100%', height: '100%' }} />
+                        <img src={collection4} alt='sea collection' style={{ width: '100%', height: '100%' }} />
                     </picture>
                 </div>
                 <Container className="my-5">
