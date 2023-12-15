@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import SimpleThreeColumnFooter from "components/layouts/footer/SimpleThreeColumnFooter";
-import TopbarSimple from "components/layouts/topbar/TopbarSimple";
+import SimpleThreeColumnFooter from "components/footer/SimpleThreeColumnFooter";
+import TopbarSimple from "components/topbar/TopbarSimple";
 import AnimationRevealPage from "components/helpers/AnimationRevealPage";
 import {
     footer, navLink, slides,
@@ -9,7 +9,7 @@ import {
 }
     from 'const/DressPageDemo';
 import logo from "images/logo.svg";
-import SimpleProductDetail from "components/layouts/product/SimpleProductDetail";
+import SimpleProductDetail from "components/product/SimpleProductDetail";
 export default function ProductPage(props) {
     return (
         <>

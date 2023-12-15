@@ -1,21 +1,21 @@
 import React from "react";
 import AnimationRevealPage from "components/helpers/AnimationRevealPage";
-import TopbarButton from "components/layouts/topbar/TopbarButton";
+import TopbarButton from "components/topbar/TopbarButton";
 import { Button, Container } from "react-bootstrap";
 import TwoColumnWithImageLayout from "components/layouts/TwoColumnWithImageLayout";
 import logo from "images/logo.svg";
-import ListCardLayout from "components/layouts/menu/CardListLayout";
-import FlexiblePrice from "components/layouts/pricing/FlexiblePrice";
+import ListCardLayout from "components/menu/CardListLayout";
+import FlexiblePrice from "components/pricing/FlexiblePrice";
 import FeatureThreeColumnLayout from "components/layouts/FeatureThreeColumnLayout";
 import StatThreeColumnLayout from "components/layouts/StatThreeColumnLayout";
-import DurationPrice from "components/layouts/pricing/DurationPrice";
-import CardListSwitcherLayout from "components/layouts/menu/CardListSwitcherLayout";
+import DurationPrice from "components/pricing/DurationPrice";
+import CardListSwitcherLayout from "components/menu/CardListSwitcherLayout";
 import { priceDurationPage, pricePage, authors, menu, footer, listCard, reviews, statPage, cardMenu, featuresPage, navLink, advantage } from 'const/demodata';
-import AvatarThreeColumnLayout from "components/layouts/users/AvatarThreeColumnLayout";
-import ReviewThreeColumnLayout from "components/layouts/users/ReviewThreeColumnLayout";
+import AvatarThreeColumnLayout from "components/users/AvatarThreeColumnLayout";
+import ReviewThreeColumnLayout from "components/users/ReviewThreeColumnLayout";
 import DownloadAppLayout from "components/layouts/DownloadAppLayout";
 import app from 'images/app-mockup.png';
-import SimpleThreeColumnFooter from "components/layouts/footer/SimpleThreeColumnFooter";
+import SimpleThreeColumnFooter from "components/footer/SimpleThreeColumnFooter";
 
 export default function MainLandingPage() {
 

@@ -98,9 +98,9 @@ import AnimationRevealPage from "components/helpers/AnimationRevealPage.js"
 // import FiveColumnWithBackgroundFooter from "components/footers/FiveColumnWithBackground.js";
 // import FiveColumnDarkFooter from "components/footers/FiveColumnDark.js";
 // import MiniCenteredFooter from "components/footers/MiniCenteredFooter.js";
-import RestaurantLandingPage from 'pages/RestaurantLandingPage';
-import DressShopLandingPage from 'pages/DressShopLandingPage';
-import ProductPage from 'pages/ProductPage';
+import RestaurantLandingPage from 'views/landing-page/RestaurantLandingPage';
+import DressShopLandingPage from 'views/landing-page/DressShopLandingPage';
+import ProductPage from 'views/landing-page/ProductPage';
 
 export const components = {
   landingPages: {
