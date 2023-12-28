@@ -7,11 +7,11 @@ export default function TopbarButton(props) {
     return (
         <Navbar expand="lg" {...type} bg="light">
             <Container>
-                <Logo src={props.logo} />
+                <Logo src={props.logo} title={props.title} />
                 <div className="d-flex flex-lg-row-reverse">
                     {props.theme ? <ThemeSwither theme="light" switch="dark" /> : null}
                     <Navigation navLink={props.navLink}>
-                        <Button className="px-4" onClick={props.click}><strong>{props.title}</strong></Button>
+                        <Button className="px-4" onClick={props.click}><strong>{props.button}</strong></Button>
                     </Navigation>
                 </div>
             </Container>

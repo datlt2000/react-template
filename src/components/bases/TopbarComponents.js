@@ -12,7 +12,7 @@ export function Logo(props) {
                 height="40"
                 className="d-inline-block align-top"
             />{' '}
-            <strong style={{ lineHeight: "40px", color: "#243E63" }}>Treact</strong>
+            {props.title ? <strong style={{ lineHeight: "40px", color: "#243E63" }}>{props.title}</strong> : null}
         </Navbar.Brand>
     );
 }

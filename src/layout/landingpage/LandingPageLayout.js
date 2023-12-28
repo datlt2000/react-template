@@ -9,7 +9,7 @@ import logo from "images/logo.svg";
 const LandingPageLayout = () => {
     return (
         <div>
-            <TopbarSimple type="relative" navLink={navLink} logo={logo} />
+            <TopbarSimple type="relative" navLink={navLink} logo={logo} title="Treact" />
             <LayoutContent routes={landingPageRoute} />
             <SimpleThreeColumnFooter {...footer}/>
         </div>

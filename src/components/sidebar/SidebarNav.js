@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import { Badge } from 'react-bootstrap'
+import { Badge, NavDropdown, NavItem } from 'react-bootstrap'
 
-export const SidebarNav = ({ items }) => {
+export const SidebarNav = (props) => {
 	const location = useLocation()
 	const navLink = (name, icon, badge, indent = false) => {
 		return (
@@ -27,14 +27,10 @@ export const SidebarNav = ({ items }) => {
 	}
 
 	const navItem = (item, index, indent = false) => {
-		const { component, name, badge, icon, ...rest } = item
-		const Component = component
+		const { component, name, badge, icon, ...rest } = item;
+		const Component = component;
 		return (
 			<Component
-				{...(rest.to &&
-					!rest.items && {
-					component: NavLink,
-				})}
 				key={index}
 				{...rest}
 			>
@@ -43,29 +39,25 @@ export const SidebarNav = ({ items }) => {
 		)
 	}
 	const navGroup = (item, index) => {
-		const { component, name, icon, items, to, ...rest } = item
-		const Component = component
+		const { name, icon, items, to, ...rest } = item
 		return (
-			<Component
-				compact
-				idx={String(index)}
+			<NavDropdown
 				key={index}
-				toggler={navLink(name, icon)}
-				visible={location.pathname.startsWith(to)}
+				id={name}
+				title={name}
 				{...rest}
 			>
 				{item.items?.map((item, index) =>
 					item.items ? navGroup(item, index) : navItem(item, index, true),
 				)}
-			</Component>
+			</NavDropdown>
 		)
 	}
-
 	return (
-		<React.Fragment>
-			{items &&
-				items.map((item, index) => (item.items ? navGroup(item, index) : navItem(item, index)))}
-		</React.Fragment>
+		<>
+			{props.items &&
+				props.items.map((item, index) => (item.items ? navGroup(item, index) : navItem(item, index)))}
+		</>
 	)
 }
 

@@ -7,7 +7,7 @@ export default function TopbarSimple(props) {
     return (
         <Navbar expand="lg" {...type} bg="light">
             <Container>
-                <Logo src={props.logo} />
+                <Logo src={props.logo} title={props.title} />
 
                 <Navigation navLink={props.navLink}>
                 </Navigation>

@@ -67,3 +67,14 @@ body {
 .text-gray-5 {
     color: var(--bs-body-color) !important;
 }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}

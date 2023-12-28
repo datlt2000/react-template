@@ -7,7 +7,7 @@ export default function TopbarLogin(props) {
     return (
         <Navbar expand="lg" {...type} bg="light">
             <Container>
-                <Logo src={props.logo} />
+                <Logo src={props.logo} title={props.title} />
                 <div className="d-flex flex-lg-row-reverse">
                     {props.theme ? <ThemeSwither theme="light" switch="dark" /> : null}
                     <Navigation navLink={props.navLink}>

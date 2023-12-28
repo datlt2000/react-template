@@ -1,55 +1,37 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {
 	Button,
 	Navbar,
 	Container,
-	Nav,
-} from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { SidebarNav } from 'components/sidebar/SidebarNav'
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+	Nav
+} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { SidebarNav } from 'components/sidebar/SidebarNav';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Logo } from "components/bases/TopbarComponents";
 
-const Sidebar = ({ navigation }) => {
-	const dispatch = useDispatch()
-	const unfoldable = useSelector((state) => state.sidebarUnfoldable)
-	const sidebarShow = useSelector((state) => state.sidebarShow)
+const Sidebar = (props) => {
+	const dispatch = useDispatch();
+	const unfoldable = useSelector((state) => state.sidebarUnfoldable);
+	const sidebarShow = useSelector((state) => state.sidebarShow);
 
 	return (
-		<Navbar
-			className="border-end"
-			position="fixed"
-		>
+		<Navbar className="sidebar">
 			<Container className="border-bottom">
-				<Navbar.Brand to="/">
-					<FontAwesomeIcon customClassName="sidebar-brand-full" icon={faFacebook} height={32} />
-				</Navbar.Brand>
+				<Logo src={props.logo} title={props.title} />
 				<Button
-					className="d-lg-none"
-					dark
+					variant='link'
 					onClick={() => dispatch({ type: 'set', sidebarShow: false })}
 				>
-					<FontAwesomeIcon customClassName="sidebar-brand-narrow" icon={faBars} height={32} />
+					<FontAwesomeIcon icon={faBars} />
 				</Button>
 			</Container>
-			<Nav>
-				{/* <SidebarNav items={navigation} /> */}
-				<Nav.Item>
-					<Nav.Link href="/home">Active</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link eventKey="link-1">Link</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link eventKey="link-2">Link</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link eventKey="disabled" disabled>
-						Disabled
-					</Nav.Link>
-				</Nav.Item>
-			</Nav>
+			<Container>
+				<Nav className="d-md-block">
+					<SidebarNav items={props.navigation} />
+				</Nav>
+			</Container>
 		</Navbar>
 	)
 }

@@ -13,7 +13,7 @@ import SimpleProductDetail from "components/product/SimpleProductDetail";
 export default function ProductPage(props) {
     return (
         <>
-            <TopbarSimple type="relative" navLink={navLink} logo={logo} />
+            <TopbarSimple type="relative" navLink={navLink} logo={logo} title="Treact" />
             <AnimationRevealPage disabled>
                 <Container>
                     <SimpleProductDetail images={slides} reverse />

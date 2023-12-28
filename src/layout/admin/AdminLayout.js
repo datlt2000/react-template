@@ -13,11 +13,11 @@ const AdminLayout = () => {
 	return (
 		<Row>
 			<Col xs={2}>
-				<Sidebar navigation={_nav} />
+				<Sidebar navigation={_nav} logo={logo} title="Treact" />
 			</Col>
 			<Col xs={10}>
 				<div className="wrapper d-flex flex-column min-vh-100">
-					<TopbarSimple type="relative" navLink={navLink} logo={logo} />
+					<TopbarSimple type="relative" navLink={navLink} logo={logo} title="Treact" />
 					<div className="body flex-grow-1">
 						<LayoutContent routes={adminRoute} />
 					</div>

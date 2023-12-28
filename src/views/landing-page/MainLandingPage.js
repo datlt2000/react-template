@@ -27,7 +27,7 @@ export default function MainLandingPage() {
     }
     return (
         <>
-            <TopbarButton type="sticky" theme navLink={navLink} logo={logo} title="Download" />
+            <TopbarButton type="sticky" theme navLink={navLink} logo={logo} title="Treact" button="Download" />
             <AnimationRevealPage disabled>
                 <Container className="my-5">
                     <TwoColumnWithImageLayout  {...advantage} >
