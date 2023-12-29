@@ -6,12 +6,10 @@ import {
     faNoteSticky,
     faStar
 } from '@fortawesome/free-regular-svg-icons';
-import { faCalculator, faChartPie, faAudioDescription, faDroplet, faPencil, faPuzzlePiece, faGauge } from '@fortawesome/free-solid-svg-icons'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { faCalculator, faChartPie, faAudioDescription, faDroplet, faPencil, faPuzzlePiece, faGauge } from '@fortawesome/free-solid-svg-icons';
 
 const _nav = [
     {
-        component: Nav.Link,
         name: 'Dashboard',
         to: '/dashboard',
         icon: <FontAwesomeIcon icon={faGauge} size="lg" />,
@@ -21,112 +19,91 @@ const _nav = [
         },
     },
     {
-        component: Navbar.Text,
         name: 'Theme',
     },
     {
-        component: Nav.Link,
         name: 'Colors',
         to: '/theme/colors',
         icon: <FontAwesomeIcon icon={faDroplet} size="lg" />,
     },
     {
-        component: Nav.Link,
         name: 'Typography',
         to: '/theme/typography',
         icon: <FontAwesomeIcon icon={faPencil} size="lg" />,
     },
     {
-        component: Navbar.Text,
-        name: 'Components',
-    },
-    {
-        component: NavDropdown,
         name: 'Base',
         icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
         items: [
             {
-                component: NavDropdown.Item,
                 name: 'Accordion',
                 to: '/base/accordion',
+                icon: <FontAwesomeIcon icon={faCalculator} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Breadcrumb',
                 to: '/base/breadcrumbs',
+                icon: <FontAwesomeIcon icon={faChartPie} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Cards',
                 to: '/base/cards',
+                icon: <FontAwesomeIcon icon={faAudioDescription} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Carousel',
                 to: '/base/carousels',
+                icon: <FontAwesomeIcon icon={faBell} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Collapse',
                 to: '/base/collapses',
+                icon: <FontAwesomeIcon icon={faHandPointer} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'List group',
                 to: '/base/list-groups',
+                icon: <FontAwesomeIcon icon={faNoteSticky} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Navs & Tabs',
                 to: '/base/navs',
+                icon: <FontAwesomeIcon icon={faStar} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Pagination',
                 to: '/base/paginations',
+                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Placeholders',
                 to: '/base/placeholders',
+                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Popovers',
                 to: '/base/popovers',
+                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Progress',
                 to: '/base/progress',
+                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Spinners',
                 to: '/base/spinners',
+                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Tables',
                 to: '/base/tables',
+                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
             },
             {
-             
-                component: NavDropdown.Item,
                 name: 'Tooltips',
                 to: '/base/tooltips',
+                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
             },
         ],
     },

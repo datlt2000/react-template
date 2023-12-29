@@ -1,14 +1,12 @@
-import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Badge, NavDropdown, NavItem } from 'react-bootstrap'
+import { Badge, NavItem, NavLink } from 'react-bootstrap'
 
 export const SidebarNav = (props) => {
-	const location = useLocation()
-	const navLink = (name, icon, badge, indent = false) => {
+	const navLink = (name, to, icon, badge, indent = false) => {
 		return (
-			<>
+			<NavLink className='d-flex align-items-center' href={to}>
 				{icon
 					? icon
 					: indent && (
@@ -16,41 +14,44 @@ export const SidebarNav = (props) => {
 							<span className="nav-icon-bullet"></span>
 						</span>
 					)}
-				{name && name}
+				<div className='mx-3'>
+					{name && name}
+				</div>
 				{badge && (
 					<Badge color={badge.color} className="ms-auto">
 						{badge.text}
 					</Badge>
 				)}
-			</>
+			</NavLink>
 		)
 	}
 
 	const navItem = (item, index, indent = false) => {
-		const { component, name, badge, icon, ...rest } = item;
-		const Component = component;
+		const { name, to, badge, icon, ...rest } = item;
 		return (
-			<Component
+			<NavItem
 				key={index}
 				{...rest}
 			>
-				{navLink(name, icon, badge, indent)}
-			</Component>
+				{to ? navLink(name, to, icon, badge, indent) : <div className='ms-1'>{name}</div>}
+			</NavItem>
 		)
 	}
 	const navGroup = (item, index) => {
 		const { name, icon, items, to, ...rest } = item
 		return (
-			<NavDropdown
+			<NavItem
 				key={index}
 				id={name}
-				title={name}
 				{...rest}
 			>
-				{item.items?.map((item, index) =>
-					item.items ? navGroup(item, index) : navItem(item, index, true),
-				)}
-			</NavDropdown>
+				<div className='ms-1'>{name}</div>
+				<div>
+					{item.items?.map((item, index) =>
+						item.items ? navGroup(item, index) : navItem(item, index, true),
+					)}
+				</div>
+			</NavItem>
 		)
 	}
 	return (

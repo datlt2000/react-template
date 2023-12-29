@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {
 	Button,
 	Navbar,
@@ -13,8 +13,6 @@ import { Logo } from "components/bases/TopbarComponents";
 
 const Sidebar = (props) => {
 	const dispatch = useDispatch();
-	const unfoldable = useSelector((state) => state.sidebarUnfoldable);
-	const sidebarShow = useSelector((state) => state.sidebarShow);
 
 	return (
 		<Navbar className="sidebar">
@@ -28,7 +26,7 @@ const Sidebar = (props) => {
 				</Button>
 			</Container>
 			<Container>
-				<Nav className="d-md-block">
+				<Nav className="d-md-block w-100">
 					<SidebarNav items={props.navigation} />
 				</Nav>
 			</Container>
