@@ -4,7 +4,7 @@ export const navbarType = { "sticky": { sticky: "top" }, "fixed": { fixed: "top"
 
 export function Logo(props) {
     return (
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" className="fs-4">
             <img
                 alt=""
                 src={props.src}
@@ -24,7 +24,7 @@ export function Navigation(props) {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto align-items-center">
                     {props.navLink.map((item, index) => {
-                        return <NavLink key={index} href={item.url} className="mx-3"><strong>{item.title}</strong></NavLink>
+                        return <NavLink key={index} href={item.url} className="mx-3 fs-5"><strong>{item.title}</strong></NavLink>
                     })}
                     {props.children}
                 </Nav>
@@ -36,8 +36,8 @@ export function Navigation(props) {
 export function LoginButton(props) {
     return (
         <div className="d-inline-flex ms-lg-5 flex-column flex-lg-row align-items-center">
-            <NavLink style={{ color: "#282c34" }} className="me-lg-3 text-center mb-3 mb-lg-0"><strong>Login</strong></NavLink>
-            <Button className="px-4" style={{ borderRadius: "9999px" }}><strong>Sign up</strong></Button>
+            <NavLink style={{ color: "#282c34" }} className="me-lg-3 text-center mb-3 mb-lg-0 fs-5"><strong>Login</strong></NavLink>
+            <Button className="px-4 fs-5" style={{ borderRadius: "9999px" }}><strong>Sign up</strong></Button>
         </div>
     );
 }

@@ -6,107 +6,160 @@ import {
     faNoteSticky,
     faStar
 } from '@fortawesome/free-regular-svg-icons';
+import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 import { faCalculator, faChartPie, faAudioDescription, faDroplet, faPencil, faPuzzlePiece, faGauge } from '@fortawesome/free-solid-svg-icons';
 
 const _nav = [
     {
-        name: 'Dashboard',
-        to: '/dashboard',
-        icon: <FontAwesomeIcon icon={faGauge} size="lg" />,
-        badge: {
-            color: 'info',
-            text: 'NEW',
-        },
+        name: "Core"
     },
     {
-        name: 'Theme',
+        name: "DashBoards",
+        to: process.env.REACT_APP_DOMAIN_URL + '/admin/containers',
+        icon: <FontAwesomeIcon icon={faChartLine} size="lg"/>,
+        items: [
+            {
+                name: 'Default',
+                to: '/base/accordion',
+                badge: {
+                    color: 'info',
+                    text: 'Updated',
+                },
+            },
+            {
+                name: 'Multipurpose',
+                to: '/base/accordion'
+            },
+            {
+                name: 'Affiliate',
+                to: '/base/accordion'
+            }
+        ]
     },
     {
-        name: 'Colors',
-        to: '/theme/colors',
+        name: "Custom"
+    },
+    {
+        name: 'Pages',
+        to: process.env.REACT_APP_DOMAIN_URL + '/admin/containers',
+        icon: <FontAwesomeIcon icon={faChartPie} size="lg"/>,
+        items: [
+            {
+                name: 'Account',
+                to: '/base/accordion',
+                items: [
+                    {
+                        name: 'Profile',
+                        to: '/base/accordion'
+                    },
+                    {
+                        name: 'Billing',
+                        to: '/base/accordion'
+                    },
+                    {
+                        name: 'Security',
+                        to: '/base/accordion'
+                    },
+                ]
+            },
+            {
+                name: 'Pricing',
+                to: '/base/accordion'
+            },
+        ]
+    },
+    // {
+    //     name: 'Theme',
+    // },
+    {
+        name: 'Images',
+        to: process.env.REACT_APP_DOMAIN_URL + '/admin/images',
         icon: <FontAwesomeIcon icon={faDroplet} size="lg" />,
     },
     {
-        name: 'Typography',
-        to: '/theme/typography',
+        name: 'Volumes',
+        to: process.env.REACT_APP_DOMAIN_URL + '/admin/volumes',
         icon: <FontAwesomeIcon icon={faPencil} size="lg" />,
     },
-    {
-        name: 'Base',
-        icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-        items: [
-            {
-                name: 'Accordion',
-                to: '/base/accordion',
-                icon: <FontAwesomeIcon icon={faCalculator} size="lg" />,
-            },
-            {
-                name: 'Breadcrumb',
-                to: '/base/breadcrumbs',
-                icon: <FontAwesomeIcon icon={faChartPie} size="lg" />,
-            },
-            {
-                name: 'Cards',
-                to: '/base/cards',
-                icon: <FontAwesomeIcon icon={faAudioDescription} size="lg" />,
-            },
-            {
-                name: 'Carousel',
-                to: '/base/carousels',
-                icon: <FontAwesomeIcon icon={faBell} size="lg" />,
-            },
-            {
-                name: 'Collapse',
-                to: '/base/collapses',
-                icon: <FontAwesomeIcon icon={faHandPointer} size="lg" />,
-            },
-            {
-                name: 'List group',
-                to: '/base/list-groups',
-                icon: <FontAwesomeIcon icon={faNoteSticky} size="lg" />,
-            },
-            {
-                name: 'Navs & Tabs',
-                to: '/base/navs',
-                icon: <FontAwesomeIcon icon={faStar} size="lg" />,
-            },
-            {
-                name: 'Pagination',
-                to: '/base/paginations',
-                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-            },
-            {
-                name: 'Placeholders',
-                to: '/base/placeholders',
-                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-            },
-            {
-                name: 'Popovers',
-                to: '/base/popovers',
-                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-            },
-            {
-                name: 'Progress',
-                to: '/base/progress',
-                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-            },
-            {
-                name: 'Spinners',
-                to: '/base/spinners',
-                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-            },
-            {
-                name: 'Tables',
-                to: '/base/tables',
-                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-            },
-            {
-                name: 'Tooltips',
-                to: '/base/tooltips',
-                icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
-            },
-        ],
-    },
+    // {
+    //     name: 'Container'
+    // }
+    // {
+    //     name: 'Base',
+    //     icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //     items: [
+    //         {
+    //             name: 'Accordion',
+    //             to: '/base/accordion',
+    //             icon: <FontAwesomeIcon icon={faCalculator} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Breadcrumb',
+    //             to: '/base/breadcrumbs',
+    //             icon: <FontAwesomeIcon icon={faChartPie} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Cards',
+    //             to: '/base/cards',
+    //             icon: <FontAwesomeIcon icon={faAudioDescription} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Carousel',
+    //             to: '/base/carousels',
+    //             icon: <FontAwesomeIcon icon={faBell} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Collapse',
+    //             to: '/base/collapses',
+    //             icon: <FontAwesomeIcon icon={faHandPointer} size="lg" />,
+    //         },
+    //         {
+    //             name: 'List group',
+    //             to: '/base/list-groups',
+    //             icon: <FontAwesomeIcon icon={faNoteSticky} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Navs & Tabs',
+    //             to: '/base/navs',
+    //             icon: <FontAwesomeIcon icon={faStar} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Pagination',
+    //             to: '/base/paginations',
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Placeholders',
+    //             to: '/base/placeholders',
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Popovers',
+    //             to: '/base/popovers',
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Progress',
+    //             to: '/base/progress',
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Spinners',
+    //             to: '/base/spinners',
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Tables',
+    //             to: '/base/tables',
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //         },
+    //         {
+    //             name: 'Tooltips',
+    //             to: '/base/tooltips',
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //         },
+    //     ],
+    // },
     // {
     //     component: Nav,
     //     name: 'Buttons',

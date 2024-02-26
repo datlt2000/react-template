@@ -9,6 +9,7 @@ const LandingPageLayout = React.lazy(() => import('layout/landingpage/LandingPag
 // Pages
 const Login = React.lazy(() => import('views/pages/login/Login'))
 const Register = React.lazy(() => import('views/pages/register/Register'))
+const ForgotPass = React.lazy(() => import('views/pages/forgotpass/ForgotPass'))
 const Page404 = React.lazy(() => import('views/pages/page404/Page404'))
 const Page500 = React.lazy(() => import('views/pages/page500/Page500'))
 const router = createBrowserRouter([
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
         path: "/register",
         name: "Register Page",
         element: <Register />
+    },
+    {
+        path: "/forgotpass",
+        name: "Forgot Password Page",
+        element: <ForgotPass />
     },
     {
         path: "/404",

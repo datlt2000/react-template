@@ -14,7 +14,7 @@ export const SidebarNav = (props) => {
 							<span className="nav-icon-bullet"></span>
 						</span>
 					)}
-				<div className='mx-3'>
+				<div className='mx-3 fs-5' style={{ fontWeight: 500 }}>
 					{name && name}
 				</div>
 				{badge && (
@@ -33,7 +33,7 @@ export const SidebarNav = (props) => {
 				key={index}
 				{...rest}
 			>
-				{to ? navLink(name, to, icon, badge, indent) : <div className='ms-1'>{name}</div>}
+				{to ? navLink(name, to, icon, badge, indent) : <div className='sidenav-menu-heading'>{name}</div>}
 			</NavItem>
 		)
 	}
@@ -45,7 +45,7 @@ export const SidebarNav = (props) => {
 				id={name}
 				{...rest}
 			>
-				<div className='ms-1'>{name}</div>
+				<NavLink>{item.icon}<span className='ms-2'>{name}</span></NavLink>
 				<div>
 					{item.items?.map((item, index) =>
 						item.items ? navGroup(item, index) : navItem(item, index, true),

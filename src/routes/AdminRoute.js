@@ -1,12 +1,26 @@
 import React from "react";
-const DashBoard = React.lazy(() => import('views/admin/DashBoard'));
+const Containers = React.lazy(() => import('views/admin/Containers'));
+const Images = React.lazy(() => import('views/admin/Images'));
+const Volumes = React.lazy(() => import('views/admin/Volumes'));
 
 const adminRoute = [
     {
-        path: '/dashboard',
+        path: '/containers',
         exact: true,
-        name: "Dashboard Page",
-        element: <DashBoard />
+        name: "Containers Page",
+        element: <Containers />
+    },
+    {
+        path: '/images',
+        exact: true,
+        name: "Images Page",
+        element: <Images />
+    },
+    {
+        path: '/volumes',
+        exact: true,
+        name: "Volumes Page",
+        element: <Volumes />
     },
 ]
 

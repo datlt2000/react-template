@@ -8,13 +8,10 @@ import {
 	Form,
 	InputGroup,
 	Row,
-} from "react-bootstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
-import bgImage from "images/bg-login.jfif";
+} from "react-bootstrap";
+import bgImage from "images/bg-forgotpass.jfif";
 
-const Login = () => {
+const ForgotPass = () => {
 	return (
 		<div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center bg-gradient-primary">
 			<Container>
@@ -27,31 +24,19 @@ const Login = () => {
 									</Col>
 									<Col lg={6} className='p-5'>
 										<Form>
-											<h1 className='text-center mb-5'>Login</h1>
+											<h1 className='text-center'>Forgot Your Password</h1>
+                                            <p className='text-center mb-3'>We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password!</p>
 											<InputGroup className="mb-3">
-												<InputGroup.Text>
-													<FontAwesomeIcon icon={faUser} />
-												</InputGroup.Text>
-												<Form.Control placeholder="Username" autoComplete="username"/>
-											</InputGroup>
-											<InputGroup className="mb-4">
-												<InputGroup.Text>
-													<FontAwesomeIcon icon={faLock} />
-												</InputGroup.Text>
-												<Form.Control
-													type="password"
-													placeholder="Password"
-													autoComplete="current-password"
-												/>
+												<Form.Control size='lg' placeholder="Email Address" autoComplete="email"/>
 											</InputGroup>
 											<div class="d-grid gap-2 my-4">
 												<Button color="primary">
-													Login
+													Reset Password
 												</Button>
 											</div>
 											<hr />
 											<div class="d-grid gap-2 text-center my-4 small">
-												<Link to='/forgotpass'>Forgot Password?</Link>
+												<Link to='/login'>Login</Link>
 												<Link to="/register">Create an Account!</Link>
 											</div>
 										</Form>
@@ -66,4 +51,4 @@ const Login = () => {
 	)
 }
 
-export default Login
+export default ForgotPass

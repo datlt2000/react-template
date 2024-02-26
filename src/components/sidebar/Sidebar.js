@@ -15,7 +15,7 @@ const Sidebar = (props) => {
 	const dispatch = useDispatch();
 
 	return (
-		<Navbar className="sidebar">
+		<Navbar className="sidebar nav shadow-right sidenav-light bg-white">
 			<Container className="border-bottom">
 				<Logo src={props.logo} title={props.title} />
 				<Button
