@@ -15,9 +15,7 @@ body {
 }
 
 .link:hover {
-    color: rgb(100 21 255) !important;
-    border-bottom: 2px solid rgb(100 21 255);
-    padding-bottom: 0.25rem;
+    color: var(--border-primary) !important;
 }
 
 .border-weight-bold {
@@ -130,9 +128,9 @@ body {
     color: rgba(33, 40, 50, 0.5) !important;
 }
 
-.sidenav-menu-heading {
+.sidenav-menu-item {
     padding: 1.75rem 0.5rem 0.75rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 750;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -140,5 +138,33 @@ body {
 }
 
 .shadow-right {
-    box-shadow: 0.15rem 0 1.75rem 0 rgba(33, 40, 50, 0.15) !important;
+    box-shadow: 0.15rem 0.15rem 0.5rem 0 rgba(33, 40, 50, 0.1) !important;
+}
+
+.sidebar-icon {
+    font-weight: 400;
+    color: #969fac
+}
+
+#sidebar::-webkit-scrollbar-track
+{
+	border-radius: 5px;
+}
+
+#sidebar::-webkit-scrollbar
+{
+	width: 5px;
+}
+
+#sidebar::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: #ddd;
+}
+
+.sidebar .accordion-button:not(.collapsed) {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    color: var(--border-primary);
 }

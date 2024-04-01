@@ -1,24 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import { Badge, NavItem, NavLink } from 'react-bootstrap'
+import { Accordion, Badge, NavItem, NavLink } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const SidebarNav = (props) => {
 	const navLink = (name, to, icon, badge, indent = false) => {
 		return (
-			<NavLink className='d-flex align-items-center' href={to}>
+			<NavLink className='d-flex align-items-center link ms-1' href={to}>
 				{icon
-					? icon
-					: indent && (
-						<span className="nav-icon">
-							<span className="nav-icon-bullet"></span>
-						</span>
-					)}
-				<div className='mx-3 fs-5' style={{ fontWeight: 500 }}>
-					{name && name}
+					? <FontAwesomeIcon icon={icon} className='sidebar-icon' fixedWidth />
+					: null}
+				<div className='ms-2'>
+					{name}
 				</div>
 				{badge && (
-					<Badge color={badge.color} className="ms-auto">
+					<Badge pill bg={badge.color} className="ms-auto">
 						{badge.text}
 					</Badge>
 				)}
@@ -32,36 +28,42 @@ export const SidebarNav = (props) => {
 			<NavItem
 				key={index}
 				{...rest}
+				className='ms-2'
 			>
-				{to ? navLink(name, to, icon, badge, indent) : <div className='sidenav-menu-heading'>{name}</div>}
+				{to ? navLink(name, to, icon, badge, indent) : <div className='sidenav-menu-item'>{name}</div>}
 			</NavItem>
 		)
 	}
-	const navGroup = (item, index) => {
+	const navGroup = (item, ind) => {
 		const { name, icon, items, to, ...rest } = item
 		return (
-			<NavItem
-				key={index}
+			<Accordion.Item
+				eventKey={name + ind.toString()}
+				key={name + ind.toString()}
 				id={name}
 				{...rest}
+				className='border-0'
 			>
-				<NavLink>{item.icon}<span className='ms-2'>{name}</span></NavLink>
-				<div>
-					{item.items?.map((item, index) =>
-						item.items ? navGroup(item, index) : navItem(item, index, true),
-					)}
-				</div>
-			</NavItem>
+				<Accordion.Header className='side-accordion-button'>
+					{item.icon ? <FontAwesomeIcon icon={item.icon} className='sidebar-icon' fixedWidth /> : null}
+					<span className='ms-2'>{name}</span>
+				</Accordion.Header>
+				<Accordion.Body className='d-flex'>
+					<div className='border ms-2'></div>
+					<Accordion className='flex-fill' flush>
+						{item.items?.map((item, index) =>
+							item.items ? navGroup(item, index) : navItem(item, index, true),
+						)}
+					</Accordion>
+				</Accordion.Body>
+			</Accordion.Item>
 		)
 	}
 	return (
-		<>
+		<Accordion>
 			{props.items &&
 				props.items.map((item, index) => (item.items ? navGroup(item, index) : navItem(item, index)))}
-		</>
+		</Accordion>
 	)
 }
 
-SidebarNav.propTypes = {
-	items: PropTypes.arrayOf(PropTypes.any).isRequired,
-}

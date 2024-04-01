@@ -7,7 +7,7 @@ import { faEnvelope, faBell } from "@fortawesome/free-regular-svg-icons";
 export default function TopbarAvatar(props) {
     const type = props.type in navbarType ? navbarType[props.type] : {};
     return (
-        <Navbar expand="lg" {...type} bg="light">
+        <Navbar expand="lg" {...type} className={props.className}>
             <Container fluid className="mx-4">
                 <div></div>
                 <div className="d-flex flex-lg-row-reverse">

@@ -16,7 +16,7 @@ const _nav = [
     {
         name: "DashBoards",
         to: process.env.REACT_APP_DOMAIN_URL + '/admin/containers',
-        icon: <FontAwesomeIcon icon={faChartLine} size="lg"/>,
+        icon: faChartLine,
         items: [
             {
                 name: 'Default',
@@ -42,7 +42,7 @@ const _nav = [
     {
         name: 'Pages',
         to: process.env.REACT_APP_DOMAIN_URL + '/admin/containers',
-        icon: <FontAwesomeIcon icon={faChartPie} size="lg"/>,
+        icon: faChartPie,
         items: [
             {
                 name: 'Account',
@@ -50,7 +50,27 @@ const _nav = [
                 items: [
                     {
                         name: 'Profile',
+                        to: '/base/accordion',
+                        badge: {
+                            color: 'danger',
+                            text: '9',
+                        },
+                    },
+                    {
+                        name: 'Billing',
                         to: '/base/accordion'
+                    },
+                    {
+                        name: 'Security',
+                        to: '/base/accordion'
+                    },
+                    {
+                        name: 'Profile',
+                        to: '/base/accordion',
+                        badge: {
+                            color: 'danger',
+                            text: '9',
+                        },
                     },
                     {
                         name: 'Billing',
@@ -74,89 +94,89 @@ const _nav = [
     {
         name: 'Images',
         to: process.env.REACT_APP_DOMAIN_URL + '/admin/images',
-        icon: <FontAwesomeIcon icon={faDroplet} size="lg" />,
+        icon: faDroplet,
     },
     {
         name: 'Volumes',
         to: process.env.REACT_APP_DOMAIN_URL + '/admin/volumes',
-        icon: <FontAwesomeIcon icon={faPencil} size="lg" />,
+        icon: faPencil,
     },
     // {
     //     name: 'Container'
     // }
     // {
     //     name: 'Base',
-    //     icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //     items: [
     //         {
     //             name: 'Accordion',
     //             to: '/base/accordion',
-    //             icon: <FontAwesomeIcon icon={faCalculator} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faCalculator} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Breadcrumb',
     //             to: '/base/breadcrumbs',
-    //             icon: <FontAwesomeIcon icon={faChartPie} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faChartPie} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Cards',
     //             to: '/base/cards',
-    //             icon: <FontAwesomeIcon icon={faAudioDescription} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faAudioDescription} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Carousel',
     //             to: '/base/carousels',
-    //             icon: <FontAwesomeIcon icon={faBell} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faBell} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Collapse',
     //             to: '/base/collapses',
-    //             icon: <FontAwesomeIcon icon={faHandPointer} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faHandPointer} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'List group',
     //             to: '/base/list-groups',
-    //             icon: <FontAwesomeIcon icon={faNoteSticky} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faNoteSticky} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Navs & Tabs',
     //             to: '/base/navs',
-    //             icon: <FontAwesomeIcon icon={faStar} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faStar} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Pagination',
     //             to: '/base/paginations',
-    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Placeholders',
     //             to: '/base/placeholders',
-    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Popovers',
     //             to: '/base/popovers',
-    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Progress',
     //             to: '/base/progress',
-    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Spinners',
     //             to: '/base/spinners',
-    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Tables',
     //             to: '/base/tables',
-    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //         },
     //         {
     //             name: 'Tooltips',
     //             to: '/base/tooltips',
-    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} size="lg" />,
+    //             icon: <FontAwesomeIcon icon={faPuzzlePiece} className='sidebar-icon' />,
     //         },
     //     ],
     // },
@@ -164,7 +184,7 @@ const _nav = [
     //     component: Nav,
     //     name: 'Buttons',
     //     to: '/buttons',
-    //     icon: <FontAwesomeIcon icon={faHandPointer} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faHandPointer} className='sidebar-icon' />,
     //     items: [
     //         {
     //          
@@ -189,7 +209,7 @@ const _nav = [
     // {
     //     component: Nav,
     //     name: 'Forms',
-    //     icon: <FontAwesomeIcon icon={faNoteSticky} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faNoteSticky} className='sidebar-icon' />,
     //     items: [
     //         {
     //          
@@ -246,12 +266,12 @@ const _nav = [
     //     component: Nav.Link,
     //     name: 'Charts',
     //     to: '/charts',
-    //     icon: <FontAwesomeIcon icon={faChartPie} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faChartPie} className='sidebar-icon' />,
     // },
     // {
     //     component: Nav,
     //     name: 'Icons',
-    //     icon: <FontAwesomeIcon icon={faStar} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faStar} className='sidebar-icon' />,
     //     items: [
     //         {
     //          
@@ -280,7 +300,7 @@ const _nav = [
     // {
     //     component: Nav,
     //     name: 'Notifications',
-    //     icon: <FontAwesomeIcon icon={faBell} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faBell} className='sidebar-icon' />,
     //     items: [
     //         {
     //          
@@ -313,7 +333,7 @@ const _nav = [
     //     component: Nav.Link,
     //     name: 'Widgets',
     //     to: '/widgets',
-    //     icon: <FontAwesomeIcon icon={faCalculator} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faCalculator} className='sidebar-icon' />,
     //     badge: {
     //         color: 'info',
     //         text: 'NEW',
@@ -326,7 +346,7 @@ const _nav = [
     // {
     //     component: Nav,
     //     name: 'Pages',
-    //     icon: <FontAwesomeIcon icon={faStar} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faStar} className='sidebar-icon' />,
     //     items: [
     //         {
     //          
@@ -359,7 +379,7 @@ const _nav = [
     //     component: Nav.Link,
     //     name: 'Docs',
     //     href: 'https://coreui.io/react/docs/templates/installation/',
-    //     icon: <FontAwesomeIcon icon={faAudioDescription} size="lg" />,
+    //     icon: <FontAwesomeIcon icon={faAudioDescription} className='sidebar-icon' />,
     // },
 ]
 

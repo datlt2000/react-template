@@ -15,8 +15,8 @@ const Sidebar = (props) => {
 	const dispatch = useDispatch();
 
 	return (
-		<Navbar className="sidebar nav shadow-right sidenav-light bg-white">
-			<Container className="border-bottom">
+		<Navbar className={"sidebar nav sidenav-light " + props.className}>
+			<Container className="ps-3 pb-2">
 				<Logo src={props.logo} title={props.title} />
 				<Button
 					variant='link'
@@ -25,8 +25,8 @@ const Sidebar = (props) => {
 					<FontAwesomeIcon icon={faBars} />
 				</Button>
 			</Container>
-			<Container>
-				<Nav className="d-md-block w-100">
+			<Container id="sidebar" style={{ overflow: 'auto', height: "calc(100vh - 65px)" }}>
+				<Nav className="d-md-block w-100 align-self-start">
 					<SidebarNav items={props.navigation} />
 				</Nav>
 			</Container>
