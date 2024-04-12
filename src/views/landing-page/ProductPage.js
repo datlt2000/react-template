@@ -13,7 +13,6 @@ import SimpleProductDetail from "components/product/SimpleProductDetail";
 export default function ProductPage(props) {
     return (
         <>
-            <TopbarSimple type="relative" navLink={navLink} logo={logo} title="Treact" />
             <AnimationRevealPage disabled>
                 <Container>
                     <SimpleProductDetail images={slides} reverse />
@@ -36,9 +35,6 @@ export default function ProductPage(props) {
                         gam màu đỏ tươi sáng, bắt mắt. Với gam màu đỏ này giúp các nàng trở nên nổi bật và
                         tươi sáng hơn, tôn da thêm bừng sáng và dạng rỡ.</div>
                     <img src={collection4} alt='' />
-                </Container>
-                <Container fluid className="my-5">
-                    <SimpleThreeColumnFooter {...footer} />
                 </Container>
             </AnimationRevealPage>
         </>
