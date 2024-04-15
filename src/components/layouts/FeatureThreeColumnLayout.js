@@ -14,7 +14,7 @@ export default function FeatureThreeColumnLayout(props) {
     return (
         <Container>
             <h1 className='heading-title text-center'>{props.title}</h1>
-            <div className="text-center m-auto mt-4 mb-5 opacity-75" style={{ maxWidth: '56rem' }}>
+            <div className="text-center m-auto mb-5 mt-4 description" style={{ maxWidth: '56rem' }}>
                 {props.description}
             </div>
             <br />
@@ -28,7 +28,7 @@ export default function FeatureThreeColumnLayout(props) {
                                 </div>
                             </div>
                             <h4 className="text-bold-7 mb-3 mt-4">{feature.title}</h4>
-                            <p className="opacity-75" style={{ fontSize: '0.875rem' }}>{feature.description}</p>
+                            <p className="description fs-6">{feature.description}</p>
                         </Col>
                     );
                 }

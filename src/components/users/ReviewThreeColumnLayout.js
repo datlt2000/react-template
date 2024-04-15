@@ -4,7 +4,7 @@ export default function ReviewThreeColumnLayout(props) {
     return (
         <Container>
             <h1 className='heading-title text-center'>{props.title}</h1>
-            <div className="text-center m-auto my-4 opacity-75" style={{ maxWidth: '56rem' }}>
+            <div className="text-center m-auto my-4 description" style={{ maxWidth: '56rem' }}>
                 {props.description}
             </div>
             <br />
@@ -17,7 +17,7 @@ export default function ReviewThreeColumnLayout(props) {
                                     <Image src={item.image} />
                                 </div>
                                 <div className="text-center my-3">
-                                    <p style={{ fontSize: '1rem', opacity: 0.7 }}>{item.review}</p>
+                                    <p className="description">{item.review}</p>
                                     <h5>- {item.name}</h5>
                                 </div>
                             </div>

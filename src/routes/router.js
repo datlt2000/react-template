@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element: <AdminLayout />
     },
     {
-        path: "/landing-page/*",
+        path: "/*",
         name: "Landing Pages",
         element: <LandingPageLayout />
     }

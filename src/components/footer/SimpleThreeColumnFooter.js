@@ -12,7 +12,7 @@ const iconSize = {
 }
 
 const textSize = {
-    fontSize: '16px'
+    fontSize: '1.125rem'
 }
 
 export default function SimpleThreeColumnFooter(props) {
@@ -24,7 +24,7 @@ export default function SimpleThreeColumnFooter(props) {
                         <Image style={logoStyle} src={props.image} />
                         <span className="heading-title ms-3">{props.title}</span>
                     </div>
-                    <div style={{ fontSize: '1rem' }} className="my-3">
+                    <div className="my-3">
                         {props.description}
                     </div>
                     <Stack direction="horizontal" gap={4}>
@@ -39,21 +39,21 @@ export default function SimpleThreeColumnFooter(props) {
                 <Col lg={{ span: 7, offset: 1 }}>
                     <Stack direction='horizontal' gap={3} className="mt-4">
                         <Stack direction="vertical" gap={3}>
-                            <h5 className="fw-bold">Quick Links</h5>
+                            <h4 className="fw-bold">Quick Links</h4>
                             <div><a className="link" href="/" style={textSize}>Blog</a></div>
                             <div><a className="link" href="/" style={textSize}>FAQs</a></div>
                             <div><a className="link" href="/" style={textSize}>Support</a></div>
                             <div><a className="link" href="/" style={textSize}>About Us</a></div>
                         </Stack>
                         <Stack direction="vertical" gap={3}>
-                            <h5 className="fw-bold">Product</h5>
+                            <h4 className="fw-bold">Product</h4>
                             <div><a className="link" href="/" style={textSize}>Login</a></div>
                             <div><a className="link" href="/" style={textSize}>Personal</a></div>
                             <div><a className="link" href="/" style={textSize}>Bussiness</a></div>
                             <div><a className="link" href="/" style={textSize}>Team</a></div>
                         </Stack>
                         <Stack direction="vertical" gap={3}>
-                            <h5 className="fw-bold">Legal</h5>
+                            <h4 className="fw-bold">Legal</h4>
                             <div><a className="link" href="/" style={textSize}>GDPR</a></div>
                             <div><a className="link" href="/" style={textSize}>Privacy Policy</a></div>
                             <div><a className="link" href="/" style={textSize}>Terms of Service</a></div>
@@ -62,7 +62,7 @@ export default function SimpleThreeColumnFooter(props) {
                     </Stack>
                 </Col>
             </Row>
-            <div className="mx-auto opacity-75 text-center my-5" style={{ fontSize: '1rem' }}>
+            <div className="mx-auto opacity-75 text-center my-5">
                 {props.copyright}
             </div>
         </Container>

@@ -1,5 +1,5 @@
 body {
-    --bs-body-font-size: 1rem !important;
+    --bs-body-font-size: 1.125rem !important;
     --bs-body-font-weight: 450 !important;
     line-height: 1.625;
 }
@@ -24,6 +24,11 @@ body {
 
 .text-dark-custom {
     color: var(--bs-body-color) !important;
+}
+
+.description {
+    font-weight: 500;
+    opacity: 0.7;
 }
 
 .text-bold-7 {
